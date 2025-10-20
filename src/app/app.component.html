@@ -1,202 +1,338 @@
+<nav class="sticky top-0 z-40 bg-slate-900 border-b border-slate-800 shadow-sm"> <div class="container mx-auto px-6 h-14 flex items-center gap-4 text-sm"> <a href="#resumen" class="text-slate-100 hover:text-blue-300 focus-visible:ring-2 focus-visible:ring-blue-400 rounded px-2 py-1">Resumen</a> <a href="#tecnologias" class="text-slate-100 hover:text-blue-300 focus-visible:ring-2 focus-visible:ring-blue-400 rounded px-2 py-1">Tecnologías</a> <a href="#habilidades-tecnicas" class="text-slate-100 hover:text-blue-300 focus-visible:ring-2 focus-visible:ring-blue-400 rounded px-2 py-1">Habilidades</a> <a href="#programacion" class="text-slate-100 hover:text-blue-300 focus-visible:ring-2 focus-visible:ring-blue-400 rounded px-2 py-1">Arquitectura</a> <a href="#metodologias" class="text-slate-100 hover:text-blue-300 focus-visible:ring-2 focus-visible:ring-blue-400 rounded px-2 py-1">Metodologías</a> <a href="#proyectos" class="text-slate-100 hover:text-blue-300 focus-visible:ring-2 focus-visible:ring-blue-400 rounded px-2 py-1">Proyectos</a> <a href="#sobre-mi" class="text-slate-100 hover:text-blue-300 focus-visible:ring-2 focus-visible:ring-blue-400 rounded px-2 py-1">Sobre mí</a> <a href="#contacto" class="ml-auto bg-blue-600 hover:bg-blue-700 px-3 py-1.5 rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400/70">Contacto</a> </div> </nav>
+
 <div class="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
+  <!-- Skip link accesible -->
+  <a href="#contenido" class="sr-only focus:not-sr-only focus:fixed focus:z-50 focus:top-4 focus:left-4 bg-slate-900/90 px-4 py-2 rounded-lg ring-2 ring-blue-400">
+    Saltar al contenido
+  </a>
+
   <!-- Header/Hero Section -->
-  <header class="container mx-auto px-6 py-16 md:py-24">
+  <header class="container mx-auto px-6 py-16 md:py-24" role="banner">
     <div class="max-w-4xl">
       <h1 class="text-5xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-        Desarrollador Backend Junior
+        Desarrollador Full-Stack (Junior)
       </h1>
-      <div class="inline-block bg-green-500/20 border border-green-500 text-green-400 px-4 py-2 rounded-full text-sm font-semibold mb-4">
-        🟢 Disponible para trabajar
+
+      <div class="inline-flex items-center gap-2 bg-green-500/20 border border-green-500 text-green-400 px-4 py-2 rounded-full text-sm font-semibold mb-4">
+        <span aria-hidden="true">🟢</span>
+        <span>Disponible para trabajar</span>
       </div>
+
       <p class="text-xl md:text-2xl text-slate-300 mb-6">
-        Especializado en Java | Spring Boot | .NET | SQL
+        Java · Spring Boot · C#/.NET · SQL · Angular
       </p>
-      <p class="text-lg text-slate-400 mb-8 leading-relaxed">
-        Estudiante de Tecnicatura Universitaria en Programación (TUP) en la Universidad Tecnológica Nacional Facultad Regional Córdoba (UTN - FRC).
-        Enfocado en desarrollo backend con Spring Boot y .NET, y gestión de bases de datos relacionales,
-        con experiencia en proyectos académicos y reales.
+
+      <p class="text-lg text-slate-400 mb-8 leading-relaxed max-w-3xl">
+        Estudiante de la Tecnicatura Universitaria en Programación (UTN – FRC).
+        Enfocado en backend con Spring Boot y .NET; diseño de APIs REST, POO/patrones, JWT y persistencia de datos
+        (SQL Server, MySQL, MongoDB). En frontend trabajo con Angular y TypeScript.
       </p>
+
       <div class="flex gap-4 flex-wrap">
-        <a href="https://github.com/valentinopretto" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-lg transition-colors">
-          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-          </svg>
+        <a href="https://github.com/josiasperalta"
+           target="_blank" rel="noopener noreferrer"
+           aria-label="Abrir GitHub de Josias en una pestaña nueva"
+           class="group flex items-center gap-2 bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-lg transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400/70">
+          <svg class="w-5 h-5 transition-transform group-hover:-translate-y-0.5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
           GitHub
         </a>
-        <a href="https://www.linkedin.com/in/valent%C3%ADn-opretto-a62a15332/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 bg-slate-700 hover:bg-slate-600 px-6 py-3 rounded-lg transition-colors">
-          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-          </svg>
+
+        <a href="https://www.linkedin.com/in/josias-peralta-618003274"
+           target="_blank" rel="noopener noreferrer"
+           aria-label="Abrir LinkedIn de Josias en una pestaña nueva"
+           class="group flex items-center gap-2 bg-slate-700 hover:bg-slate-600 px-6 py-3 rounded-lg transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400/70">
+          <svg class="w-5 h-5 transition-transform group-hover:-translate-y-0.5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
           LinkedIn
         </a>
-        <a href="#contacto" class="flex items-center gap-2 bg-slate-700 hover:bg-slate-600 px-6 py-3 rounded-lg transition-colors">
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-          </svg>
+
+        <a href="#contacto"
+           class="group flex items-center gap-2 bg-slate-700 hover:bg-slate-600 px-6 py-3 rounded-lg transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400/70">
+          <svg class="w-5 h-5 transition-transform group-hover:-translate-y-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
           Contacto
+        </a>
+
+        <!-- CTA secundario: Descargar CV -->
+        <a href="/assets/Josias_Peralta_CV.pdf" download
+           class="group inline-flex items-center gap-2 bg-slate-700 hover:bg-slate-600 px-6 py-3 rounded-lg transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400/70">
+          <svg class="w-5 h-5 group-hover:-translate-y-0.5 transition" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5 5-5M12 15V3"/></svg>
+          Descargar CV
         </a>
       </div>
     </div>
   </header>
 
-  <!-- Skills Section -->
-  <section class="container mx-auto px-6 py-16 bg-slate-800/50">
-    <h2 class="text-3xl md:text-4xl font-bold mb-12 flex items-center gap-3">
-      <svg class="w-8 h-8 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
-      </svg>
-      Tecnologías
-    </h2>
-
-    <div class="grid md:grid-cols-3 gap-8">
-      <!-- Backend -->
-      <div class="bg-slate-900/50 p-6 rounded-xl border border-slate-700">
-        <h3 class="text-xl font-semibold mb-4 text-blue-400">Backend</h3>
-        <div class="flex flex-wrap gap-3">
-          <div *ngFor="let skill of backendSkills" class="flex items-center gap-2 px-4 py-2 bg-blue-900/30 border border-blue-700 rounded-lg text-sm">
-            <i [class]="skill.iconClass" class="text-2xl"></i>
-            <span>{{skill.name}}</span>
-          </div>
-        </div>
+  <main id="contenido" role="main">
+    <!-- Resumen Ejecutivo -->
+    <section id="resumen" class="container mx-auto px-6 py-16 bg-slate-800/50" role="region" aria-labelledby="resumen-title">
+      <header class="max-w-4xl mb-8">
+        <h2 id="resumen-title" class="group text-3xl md:text-4xl font-bold">
+          Resumen Ejecutivo
+          <a href="#resumen-title" class="opacity-0 group-hover:opacity-100 align-middle text-slate-400 hover:text-blue-300 ml-2 transition" aria-label="Enlace a Resumen Ejecutivo">#</a>
+        </h2>
+      </header>
+      <div class="grid md:grid-cols-2 gap-6">
+        <article class="card p-6">
+          <h3 class="text-xl font-semibold text-blue-400 mb-3">Rol Principal</h3>
+          <p class="text-slate-300 leading-relaxed">Desarrollador Full Stack con enfoque en la arquitectura .NET/C# y Spring Boot/Java.</p>
+        </article>
+        <article class="card p-6">
+          <h3 class="text-xl font-semibold text-blue-400 mb-3">Habilidades Clave</h3>
+          <p class="text-slate-300 leading-relaxed">Angular (SPA) en frontend y APIs RESTful con Entity Framework Core (ORM).</p>
+        </article>
+        <article class="card p-6">
+          <h3 class="text-xl font-semibold text-blue-400 mb-3">Diferenciador</h3>
+          <p class="text-slate-300 leading-relaxed">Experiencia práctica con SQL Server, MongoDB, Redis, Neo4j y Cassandra.</p>
+        </article>
+        <article class="card p-6">
+          <h3 class="text-xl font-semibold text-blue-400 mb-3">Metodología</h3>
+          <p class="text-slate-300 leading-relaxed">Agile (Scrum/Kanban) y fundamentos de PMBOK para gestión de proyectos.</p>
+        </article>
       </div>
+    </section>
 
-      <!-- Databases -->
-      <div class="bg-slate-900/50 p-6 rounded-xl border border-slate-700">
-        <h3 class="text-xl font-semibold mb-4 text-cyan-400 flex items-center gap-2">
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"/>
-          </svg>
-          Bases de Datos
-        </h3>
-        <div class="flex flex-wrap gap-3">
-          <div *ngFor="let skill of databaseSkills" class="flex items-center gap-2 px-4 py-2 bg-cyan-900/30 border border-cyan-700 rounded-lg text-sm">
-            <i [class]="skill.iconClass" class="text-2xl"></i>
-            <span>{{skill.name}}</span>
+    <!-- Tecnologías -->
+    <section id="tecnologias" class="container mx-auto px-6 py-16" role="region" aria-labelledby="tech-title">
+      <header class="mb-12">
+        <h2 id="tech-title" class="group text-3xl md:text-4xl font-bold flex items-center gap-3">
+          <svg class="w-8 h-8 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+          Tecnologías
+          <a href="#tech-title" class="opacity-0 group-hover:opacity-100 align-middle text-slate-400 hover:text-blue-300 ml-2 transition" aria-label="Enlace a Tecnologías">#</a>
+        </h2>
+      </header>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Backend -->
+        <article class="card p-6">
+          <h3 class="text-xl font-semibold mb-4 text-blue-400">Backend</h3>
+          <div class="flex flex-wrap gap-3">
+            <div *ngFor="let skill of backendSkills" class="chip inline-flex items-center gap-2">
+              <i [class]="skill.iconClass" class="text-2xl" aria-hidden="true"></i>
+              <span>{{skill.name}}</span>
+            </div>
           </div>
-        </div>
-      </div>
+        </article>
 
-      <!-- Frontend & Tools -->
-      <div class="bg-slate-900/50 p-6 rounded-xl border border-slate-700">
-        <h3 class="text-xl font-semibold mb-4 text-purple-400">Frontend & Herramientas</h3>
-        <div class="flex flex-wrap gap-3">
-          <div *ngFor="let skill of frontendSkills" class="flex items-center gap-2 px-4 py-2 bg-purple-900/30 border border-purple-700 rounded-lg text-sm">
-            <i [class]="skill.iconClass" class="text-2xl"></i>
-            <span>{{skill.name}}</span>
+        <!-- Databases -->
+        <article class="card p-6">
+          <h3 class="text-xl font-semibold mb-4 text-cyan-400 flex items-center gap-2">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"/></svg>
+            Bases de Datos
+          </h3>
+          <div class="flex flex-wrap gap-3">
+            <div *ngFor="let skill of databaseSkills" class="chip inline-flex items-center gap-2">
+              <i [class]="skill.iconClass" class="text-2xl" aria-hidden="true"></i>
+              <span>{{skill.name}}</span>
+            </div>
           </div>
-        </div>
+        </article>
+
+        <!-- Frontend & Tools -->
+        <article class="card p-6">
+          <h3 class="text-xl font-semibold mb-4 text-purple-400">Frontend & Herramientas</h3>
+          <div class="flex flex-wrap gap-3">
+            <div *ngFor="let skill of frontendSkills" class="chip inline-flex items-center gap-2">
+              <i [class]="skill.iconClass" class="text-2xl" aria-hidden="true"></i>
+              <span>{{skill.name}}</span>
+            </div>
+          </div>
+        </article>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Projects Section -->
-  <section class="container mx-auto px-6 py-16">
-    <h2 class="text-3xl md:text-4xl font-bold mb-12">Proyectos Destacados</h2>
+    <!-- Habilidades Técnicas Clave -->
+    <section id="habilidades-tecnicas" class="container mx-auto px-6 py-16 bg-slate-800/50" role="region" aria-labelledby="stack-title">
+      <header class="mb-8">
+        <h2 id="stack-title" class="group text-3xl md:text-4xl font-bold">
+          Habilidades Técnicas Clave
+          <a href="#stack-title" class="opacity-0 group-hover:opacity-100 align-middle text-slate-400 hover:text-blue-300 ml-2 transition" aria-label="Enlace a Habilidades Técnicas Clave">#</a>
+        </h2>
+      </header>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <article *ngFor="let cat of stackCategories" class="card p-6">
+          <h3 class="text-xl font-semibold mb-3" [ngClass]="cat.colorClass">{{cat.title}}</h3>
+          <ul class="list-disc list-inside text-slate-300 space-y-1">
+            <li *ngFor="let item of cat.items">{{item}}</li>
+          </ul>
+        </article>
+      </div>
+    </section>
 
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-      <div *ngFor="let project of projects"
-           class="bg-slate-800/50 border border-slate-700 rounded-xl p-6 hover:border-blue-500 transition-all hover:transform hover:-translate-y-1">
-        <div class="flex justify-between items-start mb-4">
-          <h3 class="text-xl font-bold">{{project.title}}</h3>
-          <span class="text-sm text-slate-400">{{project.year}}</span>
-        </div>
+    <!-- Programación y Arquitectura -->
+    <section id="programacion" class="container mx-auto px-6 py-16" role="region" aria-labelledby="prog-title">
+      <header class="mb-8">
+        <h2 id="prog-title" class="group text-3xl md:text-4xl font-bold">
+          Programación y Arquitectura
+          <a href="#prog-title" class="opacity-0 group-hover:opacity-100 align-middle text-slate-400 hover:text-blue-300 ml-2 transition" aria-label="Enlace a Programación y Arquitectura">#</a>
+        </h2>
+      </header>
+      <div class="grid md:grid-cols-3 gap-6">
+        <article *ngFor="let c of concepts" class="card p-6">
+          <h3 class="text-xl font-semibold text-blue-400 mb-3">{{c.title}}</h3>
+          <ul class="list-disc list-inside text-slate-300 space-y-1">
+            <li *ngFor="let d of c.details">{{d}}</li>
+          </ul>
+        </article>
+      </div>
+    </section>
 
-        <p class="text-slate-300 mb-4 text-sm leading-relaxed">
-          {{project.description}}
+    <!-- Metodologías y Gestión de Proyectos -->
+    <section id="metodologias" class="container mx-auto px-6 py-16 bg-slate-800/50" role="region" aria-labelledby="meth-title">
+      <header class="mb-8">
+        <h2 id="meth-title" class="group text-3xl md:text-4xl font-bold">
+          Metodologías y Gestión de Proyectos
+          <a href="#meth-title" class="opacity-0 group-hover:opacity-100 align-middle text-slate-400 hover:text-blue-300 ml-2 transition" aria-label="Enlace a Metodologías y Gestión">#</a>
+        </h2>
+      </header>
+      <div class="grid md:grid-cols-3 gap-6">
+        <article *ngFor="let m of methodologies" class="card p-6">
+          <h3 class="text-xl font-semibold text-cyan-400 mb-3">{{m.title}}</h3>
+          <ul class="list-disc list-inside text-slate-300 space-y-1">
+            <li *ngFor="let d of m.details">{{d}}</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- Proyectos Destacados -->
+    <section id="proyectos" class="container mx-auto px-6 py-16" role="region" aria-labelledby="projects-title">
+      <header class="mb-12">
+        <h2 id="projects-title" class="group text-3xl md:text-4xl font-bold">
+          Proyectos Destacados
+          <a href="#projects-title" class="opacity-0 group-hover:opacity-100 align-middle text-slate-400 hover:text-blue-300 ml-2 transition" aria-label="Enlace a Proyectos Destacados">#</a>
+        </h2>
+      </header>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <article *ngFor="let project of projects"
+                 class="group bg-slate-800/50 border border-slate-700 rounded-xl p-6 hover:border-blue-500 transition-all hover:-translate-y-1 hover:shadow-lg focus-within:ring-2 focus-within:ring-blue-400/70">
+          <div class="flex justify-between items-start mb-4">
+            <h3 class="text-xl font-bold">{{project.title}}</h3>
+            <span class="text-xs px-2 py-0.5 rounded-full bg-slate-700 text-slate-300">{{project.year}}</span>
+          </div>
+
+          <p class="text-slate-300 mb-4 text-sm leading-relaxed max-w-prose">{{project.description}}</p>
+
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span *ngFor="let tech of project.technologies" class="chip inline-flex items-center gap-1.5">
+              <i [class]="getTechIcon(tech).iconClass" class="text-base" aria-hidden="true"></i>
+              {{tech}}
+            </span>
+          </div>
+
+          <a *ngIf="project.github"
+             [href]="project.github"
+             class="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400/70"
+             target="_blank" rel="noopener noreferrer" aria-label="Ver repositorio del proyecto en GitHub">
+            <svg class="w-4 h-4 transition-transform group-hover:-translate-y-0.5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            Ver repositorio
+            <span class="relative inline-block">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+              <span class="block h-px w-0 bg-blue-300 group-hover:w-full transition-all duration-300 ease-out"></span>
+            </span>
+          </a>
+          <span *ngIf="!project.github" class="text-xs px-2 py-0.5 rounded-full bg-slate-700/70 text-slate-300" title="Repo no público">Proyecto privado</span>
+        </article>
+      </div>
+    </section>
+
+    <!-- Sobre Mí -->
+    <section id="sobre-mi" class="container mx-auto px-6 py-16 bg-slate-800/50" role="region" aria-labelledby="about-title">
+      <header class="mb-8">
+        <h2 id="about-title" class="group text-3xl md:text-4xl font-bold">
+          Sobre Mí
+          <a href="#about-title" class="opacity-0 group-hover:opacity-100 align-middle text-slate-400 hover:text-blue-300 ml-2 transition" aria-label="Enlace a Sobre Mí">#</a>
+        </h2>
+      </header>
+      <div class="max-w-3xl">
+        <p class="text-slate-300 mb-4 leading-relaxed">
+          Soy <strong class="text-blue-300">Josias Peralta</strong> (Córdoba, Argentina).
+          Curioso y orientado a construir soluciones end-to-end con buenas prácticas (POO, patrones, DTOs, testing y documentación).
         </p>
-
-        <div class="flex flex-wrap gap-2 mb-4">
-          <span *ngFor="let tech of project.technologies"
-                class="flex items-center gap-1.5 px-3 py-1 bg-slate-700 rounded-full text-xs">
-            <i [class]="getTechIcon(tech).iconClass" class="text-base"></i>
-            {{tech}}
-          </span>
-        </div>
-
-        <a *ngIf="project.github"
-           [href]="project.github"
-           class="flex items-center gap-2 text-blue-400 hover:text-blue-300 text-sm"
-           target="_blank"
-           rel="noopener noreferrer">
-          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-          </svg>
-          Ver repositorio
-          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
-          </svg>
-        </a>
-
-        <span *ngIf="!project.github" class="text-slate-500 text-sm italic">
-          Proyecto privado
-        </span>
+        <p class="text-slate-300 mb-4 leading-relaxed">
+          Mi foco es el <strong class="text-blue-400">backend con Java/Spring Boot y C#/.NET</strong>,
+          con <strong class="text-cyan-400">modelado y optimización de bases de datos</strong> (SQL Server, MySQL, MongoDB, Redis).
+          También desarrollo interfaces con <strong>Angular + TypeScript</strong>.
+        </p>
+        <p class="text-slate-300 leading-relaxed">
+          <strong class="text-blue-300">Busco mi primera experiencia laboral</strong> en backend o datos para
+          seguir creciendo y aportar valor a equipos de desarrollo.
+        </p>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- About Section -->
-  <section class="container mx-auto px-6 py-16 bg-slate-800/50">
-    <h2 class="text-3xl md:text-4xl font-bold mb-8">Sobre Mí</h2>
-    <div class="max-w-3xl">
-      <p class="text-slate-300 mb-4 leading-relaxed">
-        Mi nombre es Valentino Pretto, vivo en Córdoba, Argentina.
-        Soy una persona comprometida y apasionada por la tecnología, con una gran orientación
-        al aprendizaje continuo. A lo largo de mi formación en la UTN he desarrollado una sólida
-        base en programación orientada a objetos, arquitectura de software, diseño y gestión de bases de datos relacionales y no relacionales.
-      </p>
-      <p class="text-slate-300 mb-4 leading-relaxed">
-        Mi principal interés y enfoque profesional está orientado al desarrollo
-        <strong class="text-blue-400">backend con Java/Spring Boot y .NET</strong>, junto con
-        la <strong class="text-cyan-400">gestión y optimización de bases de datos</strong> relacionales.
-      </p>
-      <p class="text-slate-300 leading-relaxed">
-        <strong class="text-blue-300">Actualmente busco mi primer trabajo</strong> en el área de desarrollo backend o bases
-        de datos, donde pueda aplicar mis conocimientos y seguir creciendo profesionalmente en el entorno IT.
-      </p>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contacto" class="container mx-auto px-6 py-16">
-    <h2 class="text-3xl md:text-4xl font-bold mb-8">Contacto</h2>
-    <div class="max-w-2xl">
-      <p class="text-slate-300 mb-6">
-        ¿Tenés un proyecto en mente o querés charlar sobre una oportunidad laboral?
-        No dudes en contactarme.
-      </p>
-      <div class="flex flex-col gap-4">
-        <div class="flex items-center gap-3 text-lg hover:text-blue-400 transition-colors">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-          </svg>
-          <span>valentinopretto055&#64;gmail.com</span>
-        </div>
-        <a href="https://wa.me/5493516863225?text=Hola!%20Vi%20tu%20portfolio%20y%20me%20interesa%20contactarte" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 text-lg hover:text-blue-400 transition-colors">
-          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-          </svg>
-          <span>+54 9 351 686-3225</span>
-        </a>
-        <a href="https://www.linkedin.com/in/valentino-tom%C3%A1s-pretto-08b845333/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 text-lg hover:text-blue-400 transition-colors">
-          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-          </svg>
-          <span>LinkedIn</span>
-        </a>
-        <a href="https://github.com/valentinopretto" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 text-lg hover:text-blue-400 transition-colors">
-          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-          </svg>
-          <span>GitHub</span>
-        </a>
+    <!-- Habilidades Blandas -->
+    <section id="habilidades-blandas" class="container mx-auto px-6 py-16" role="region" aria-labelledby="soft-title">
+      <header class="mb-8">
+        <h2 id="soft-title" class="group text-3xl md:text-4xl font-bold">
+          Habilidades Blandas
+          <a href="#soft-title" class="opacity-0 group-hover:opacity-100 align-middle text-slate-400 hover:text-blue-300 ml-2 transition" aria-label="Enlace a Habilidades Blandas">#</a>
+        </h2>
+      </header>
+      <div class="card p-6 max-w-4xl">
+        <ul class="list-disc list-inside text-slate-300 space-y-1">
+          <li *ngFor="let s of softSkills">{{s}}</li>
+        </ul>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="container mx-auto px-6 py-16" role="region" aria-labelledby="contact-title">
+      <header class="mb-8">
+        <h2 id="contact-title" class="group text-3xl md:text-4xl font-bold">
+          Contacto
+          <a href="#contact-title" class="opacity-0 group-hover:opacity-100 align-middle text-slate-400 hover:text-blue-300 ml-2 transition" aria-label="Enlace a Contacto">#</a>
+        </h2>
+      </header>
+
+      <div class="max-w-2xl">
+        <p class="text-slate-300 mb-6 leading-relaxed">¿Tenés un proyecto en mente o una oportunidad? Escribime y coordinamos.</p>
+
+        <div class="flex flex-col gap-4">
+          <!-- Email (escapar @ en texto) -->
+          <a href="mailto:josiassabelperalta@gmail.com"
+             class="flex items-center gap-3 text-lg hover:text-blue-400 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400/70 rounded"
+             aria-label="Enviar correo a Josias">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            <span>josiassabelperalta&#64;gmail.com</span>
+            <button type="button" (click)="copy('josiassabelperalta@gmail.com')"
+                    class="ml-2 text-slate-400 hover:text-blue-300 focus-visible:ring-2 focus-visible:ring-blue-400/70 rounded"
+                    aria-label="Copiar email">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16h8M8 12h8M8 8h8M4 6a2 2 0 012-2h10a2 2 0 012 2v12a2 2 0 01-2 2H6a2 2 0 01-2-2z"/></svg>
+            </button>
+          </a>
+
+          <a href=" https://wa.me/qr/X6M2AEMOR3XJG1" target="_blank" rel="noopener noreferrer"
+             class="flex items-center gap-3 text-lg hover:text-blue-400 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400/70 rounded"
+             aria-label="Abrir chat de WhatsApp">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/></svg>
+            <span>+54 9 351 515-0432</span>
+            <button type="button" (click)="copy('+5493515150432')"
+                    class="ml-2 text-slate-400 hover:text-blue-300 focus-visible:ring-2 focus-visible:ring-blue-400/70 rounded"
+                    aria-label="Copiar teléfono">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16h8M8 12h8M8 8h8M4 6a2 2 0 012-2h10a2 2 0 012 2v12a2 2 0 01-2 2H6a2 2 0 01-2-2z"/></svg>
+            </button>
+          </a>
+
+          <a href="https://www.linkedin.com/in/josias-peralta-618003274" target="_blank" rel="noopener noreferrer"
+             class="flex items-center gap-3 text-lg hover:text-blue-400 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400/70 rounded"
+             aria-label="Abrir perfil de LinkedIn">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5z"/></svg>
+            <span>LinkedIn</span>
+          </a>
+
+          <a href="https://github.com/josiasperalta" target="_blank" rel="noopener noreferrer"
+             class="flex items-center gap-3 text-lg hover:text-blue-400 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400/70 rounded"
+             aria-label="Abrir perfil de GitHub">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            <span>GitHub</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <!-- Footer -->
-  <footer class="container mx-auto px-6 py-8 border-t border-slate-800">
-    <p class="text-center text-slate-400">
-      © 2025 - Desarrollado con Angular | Córdoba, Argentina
-    </p>
+  <footer class="container mx-auto px-6 py-8 border-t border-slate-800" role="contentinfo">
+    <p class="text-center text-slate-400">© 2025 · Josias Peralta · Angular · Córdoba, Argentina</p>
   </footer>
 </div>

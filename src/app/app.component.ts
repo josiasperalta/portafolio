@@ -1,20 +1,11 @@
-// app.component.ts
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-interface Skill {
-  name: string;
-  iconClass: string;
-  color: string;
-}
-
-interface Project {
-  title: string;
-  year: string;
-  description: string;
-  technologies: string[];
-  github: string | null;
-}
+interface Skill { name: string; iconClass: string; color: string; }
+interface Project { title: string; year: string; description: string; technologies: string[]; github: string | null; }
+interface StackCategory { title: string; colorClass: string; items: string[]; }
+interface Concept { title: string; details: string[]; }
+interface Methodology { title: string; details: string[]; }
 
 @Component({
   selector: 'app-root',
@@ -24,76 +15,195 @@ interface Project {
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  // === Skills (sección original "Tecnologías") ===
   backendSkills: Skill[] = [
-    { name: 'Java', iconClass: 'devicon-java-plain colored', color: '' },
-    { name: 'Spring Boot', iconClass: 'devicon-spring-plain colored', color: '' },
-    { name: 'C#', iconClass: 'devicon-csharp-plain colored', color: '' },
-    { name: '.NET', iconClass: 'devicon-dot-net-plain colored', color: '' },
-    { name: 'REST APIs', iconClass: 'devicon-fastapi-plain colored', color: '' },
-    { name: 'Microservicios', iconClass: 'devicon-kubernetes-plain colored', color: '' }
+    { name: 'Java (Spring Boot)', iconClass: 'devicon-spring-plain colored', color: '' },
+    { name: 'C# (.NET)',         iconClass: 'devicon-dot-net-plain colored', color: '' },
+    { name: 'APIs REST',         iconClass: 'si si-code', color: '' },
+    { name: 'JWT',               iconClass: 'si si-auth0', color: '' },
+    { name: 'POO / Patrones',    iconClass: 'si si-uml', color: '' }
   ];
 
   databaseSkills: Skill[] = [
     { name: 'SQL Server', iconClass: 'devicon-microsoftsqlserver-plain colored', color: '' },
-    { name: 'MySQL', iconClass: 'devicon-mysql-plain colored', color: '' },
-    { name: 'MongoDB', iconClass: 'devicon-mongodb-plain colored', color: '' }
+    { name: 'MySQL',      iconClass: 'devicon-mysql-plain colored', color: '' },
+    { name: 'MongoDB',    iconClass: 'devicon-mongodb-plain colored', color: '' },
+    { name: 'Redis',      iconClass: 'devicon-redis-plain colored', color: '' }
   ];
 
   frontendSkills: Skill[] = [
-    { name: 'Angular', iconClass: 'devicon-angular-plain colored', color: '' },
-    { name: 'JavaScript', iconClass: 'devicon-javascript-plain colored', color: '' },
-    { name: 'PrimeNG', iconClass: 'devicon-angular-plain colored', color: '' },
-    { name: 'Angular Material', iconClass: 'devicon-materialui-plain colored', color: '' },
-    { name: 'Git/GitHub', iconClass: 'devicon-github-original', color: '' }
+    { name: 'Angular',     iconClass: 'devicon-angular-plain colored', color: '' },
+    { name: 'TypeScript',  iconClass: 'devicon-typescript-plain colored', color: '' },
+    { name: 'JavaScript',  iconClass: 'devicon-javascript-plain colored', color: '' },
+    { name: 'HTML5',       iconClass: 'devicon-html5-plain colored', color: '' },
+    { name: 'CSS3',        iconClass: 'devicon-css3-plain colored', color: '' },
+    { name: 'RxJS',        iconClass: 'si si-reactivex', color: '' },
+    { name: 'Git/GitHub',  iconClass: 'devicon-github-original', color: '' }
   ];
 
-  projects: Project[] = [
+  // === Habilidades Técnicas Clave (nueva sección) ===
+  stackCategories: StackCategory[] = [
     {
-      title: 'TiendaPC',
-      year: '2024',
-      description: 'Sistema completo de gestión de ventas de componentes de PC. Backend desarrollado en C# .NET con arquitectura en capas, base de datos en SQL Server y frontend con JavaScript vanilla.',
-      technologies: ['C#', '.NET', 'SQL Server', 'JavaScript'],
-      github: 'https://github.com/valentinopretto/TiendaPC---Gestion-de-Stock-y-Ventas'
+      title: 'Backend',
+      colorClass: 'text-blue-400',
+      items: [
+        'C# (.NET Core) / Java (Spring Boot)',
+        'POO avanzada · DI · Repository · Unit of Work',
+        'RESTful APIs (CRUD) · JWT (autenticación)'
+      ]
     },
     {
-      title: 'Sistema de Gestión Inmobiliaria',
-      year: '2024',
-      description: 'Aplicación de escritorio para gestión inmobiliaria desarrollada con C# .NET y WinForms. Manejo completo de propiedades, clientes y transacciones con SQL Server.',
-      technologies: ['C#', '.NET', 'WinForms', 'SQL Server'],
-      github: 'https://github.com/valentinopretto/Gestion-Inmobiliaria'
+      title: 'Frontend',
+      colorClass: 'text-purple-400',
+      items: [
+        'Angular 17+ (TypeScript) · SPA',
+        'Componentes modulares · Enrutamiento',
+        'Formularios reactivos · RxJS (Observables)'
+      ]
     },
     {
-      title: 'TEG - Juego de Estrategia',
-      year: '2025',
-      description: 'Desarrollo de juego de estrategia de tablero implementando lógica compleja de negocio en Java con Spring Boot, persistencia en MySQL y frontend en Angular.',
-      technologies: ['Java', 'Spring Boot', 'MySQL', 'Angular'],
-      github: 'https://github.com/valentinopretto/TEG---Estrategia-de-Guerra'
+      title: 'Bases de Datos',
+      colorClass: 'text-cyan-400',
+      items: [
+        'SQL Server (consultas, SPs, triggers)',
+        'EF Core (ORM) · ADO.NET',
+        'MongoDB · Redis · Neo4j · Cassandra'
+      ]
     },
     {
-      title: 'Sistema Laboratorio Castillo Chidiac',
-      year: '2025',
-      description: 'Sistema interno para laboratorio en Córdoba. Arquitectura de microservicios con Spring Boot, base de datos MySQL y frontend en Angular con PrimeNG.',
-      technologies: ['Java', 'Spring Boot', 'MySQL', 'Angular', 'PrimeNG', 'Microservicios'],
-      github: null
+      title: 'Herramientas',
+      colorClass: 'text-emerald-400',
+      items: [
+        'Git/GitHub (ramas, PRs, merges)',
+        'Docker · Postman/Swagger',
+        'VS/VS Code/IntelliJ'
+      ]
     }
   ];
 
-  // Método para obtener el icono y color de una tecnología
-  getTechIcon(tech: string): { iconClass: string, color: string } {
-    const iconMap: { [key: string]: { iconClass: string, color: string } } = {
-      'Java': { iconClass: 'si si-oracle', color: '#F80000' },
-      'Spring Boot': { iconClass: 'si si-spring', color: '#6DB33F' },
-      'C#': { iconClass: 'si si-csharp', color: '#239120' },
-      '.NET': { iconClass: 'si si-dotnet', color: '#512BD4' },
-      'SQL Server': { iconClass: 'si si-microsoftsqlserver', color: '#CC2927' },
-      'MySQL': { iconClass: 'si si-mysql', color: '#4479A1' },
-      'MongoDB': { iconClass: 'si si-mongodb', color: '#47A248' },
-      'Angular': { iconClass: 'si si-angular', color: '#DD0031' },
-      'JavaScript': { iconClass: 'si si-javascript', color: '#F7DF1E' },
-      'PrimeNG': { iconClass: 'si si-primeng', color: '#DD0031' },
-      'WinForms': { iconClass: 'si si-windows', color: '#0078D6' },
-      'Microservicios': { iconClass: 'si si-kubernetes', color: '#326CE5' }
+  // === Programación y Arquitectura ===
+  concepts: Concept[] = [
+    {
+      title: 'POO',
+      details: [
+        'Dominio de clases, herencia, polimorfismo, encapsulamiento en C# y Java.'
+      ]
+    },
+    {
+      title: 'Acceso a Datos',
+      details: [
+        'Patrón Repository · ADO.NET (conectado/desconectado) · EF Core (ORM).'
+      ]
+    },
+    {
+      title: 'Asincronía & Web API',
+      details: [
+        'async/await (C#) y RxJS (Observables) · modelo Cliente-Servidor · ciclo de vida REST.'
+      ]
+    }
+  ];
+
+  // === Metodologías y Gestión de Proyectos ===
+  methodologies: Methodology[] = [
+    {
+      title: 'Metodologías Ágiles',
+      details: [
+        'Scrum: roles, eventos y artefactos · Kanban.',
+        'Historias de Usuario (INVEST/BDD).'
+      ]
+    },
+    {
+      title: 'Gestión de Proyectos',
+      details: [
+        'PMBOK: alcance, tiempos, costos y riesgos.',
+        'Herramientas: Jira, Trello.'
+      ]
+    },
+    {
+      title: 'Control de Versiones',
+      details: [
+        'Git/GitHub avanzado: ramas, merges y resolución de conflictos.'
+      ]
+    }
+  ];
+
+  // === Proyectos ===
+  projects: Project[] = [
+    {
+      title: 'TEG Digital (Táctica y Estrategia de la Guerra)',
+      year: '2025',
+      description: 'Estrategia por turnos con tablero mundial (SVG), objetivos, continentes y ejércitos. Backend con eventos/instantáneas, API REST y persistencia relacional + NoSQL.',
+      technologies: ['Java', 'Spring Boot', 'SQL Server', 'MongoDB', 'Angular'],
+      github: 'https://github.com/<!-- TODO: tu usuario -->/<!-- TODO: repo-teg -->'
+    },
+    {
+      title: 'Gestor de Recetas (MEAN + Spring)',
+      year: '2025',
+      description: 'ABM de recetas, ingredientes y pasos, JWT y diseño responsivo. Integración Angular + Spring Boot + MongoDB.',
+      technologies: ['Angular', 'Java', 'Spring Boot', 'MongoDB'],
+      github: 'https://github.com/<!-- TODO: tu usuario -->/<!-- TODO: repo-recetas -->'
+    },
+    {
+      title: 'Truco (JS + Tailwind)',
+      year: '2024',
+      description: 'Lógica de mazo y partidas, puntaje y rondas. UI web con Tailwind, endpoints mock.',
+      technologies: ['JavaScript', 'Tailwind'],
+      github: 'https://github.com/<!-- TODO: tu usuario -->/<!-- TODO: repo-truco -->'
+    },
+    {
+      title: 'Battleship (Java consola)',
+      year: '2024',
+      description: 'Batalla Naval por consola en Java con Player/Board/Ship, validaciones y tests.',
+      technologies: ['Java'],
+      github: 'https://github.com/<!-- TODO: tu usuario -->/<!-- TODO: repo-battleship -->'
+    },
+    {
+      title: 'Escoba de 15 (Java, Maven, JUnit)',
+      year: '2024',
+      description: 'Reglas, rondas y conteo, con TDD parcial y build Maven.',
+      technologies: ['Java'],
+      github: 'https://github.com/<!-- TODO: tu usuario -->/<!-- TODO: repo-escoba -->'
+    }
+  ];
+
+  // === Habilidades Blandas ===
+  softSkills: string[] = [
+    'Análisis lógico y resolución de problemas (debug y performance).',
+    'Aprendizaje continuo y curiosidad por nuevas tecnologías.',
+    'Trabajo colaborativo con documentación clara y herramientas de equipo.',
+    'Atención al detalle en validación de datos y pruebas de código.'
+  ];
+
+  // Acciones UI
+  copy(text: string) {
+    if (navigator?.clipboard?.writeText) {
+      navigator.clipboard.writeText(text);
+    }
+  }
+
+  // Íconos por tecnología usados en chips de Proyectos
+  getTechIcon(tech: string): { iconClass: string; color: string } {
+    const iconMap: { [k: string]: { iconClass: string; color: string } } = {
+      'Java':         { iconClass: 'devicon-java-plain colored', color: '' },
+      'Spring Boot':  { iconClass: 'devicon-spring-plain colored', color: '' },
+      'C#':           { iconClass: 'devicon-csharp-plain colored', color: '' },
+      '.NET':         { iconClass: 'devicon-dot-net-plain colored', color: '' },
+      'SQL Server':   { iconClass: 'devicon-microsoftsqlserver-plain colored', color: '' },
+      'MySQL':        { iconClass: 'devicon-mysql-plain colored', color: '' },
+      'MongoDB':      { iconClass: 'devicon-mongodb-plain colored', color: '' },
+      'Angular':      { iconClass: 'devicon-angular-plain colored', color: '' },
+      'TypeScript':   { iconClass: 'devicon-typescript-plain colored', color: '' },
+      'JavaScript':   { iconClass: 'devicon-javascript-plain colored', color: '' },
+      'HTML5':        { iconClass: 'devicon-html5-plain colored', color: '' },
+      'CSS3':         { iconClass: 'devicon-css3-plain colored', color: '' },
+      'Tailwind':     { iconClass: 'devicon-tailwindcss-plain colored', color: '' },
+      'Redis':        { iconClass: 'devicon-redis-plain colored', color: '' },
+      'Docker':       { iconClass: 'devicon-docker-plain colored', color: '' },
+      'Swagger':      { iconClass: 'si si-swagger', color: '' },
+      'Postman':      { iconClass: 'devicon-postman-plain colored', color: '' },
+      'RxJS':         { iconClass: 'si si-reactivex', color: '' },
+      'APIs REST':    { iconClass: 'si si-code', color: '' }
     };
-    return iconMap[tech] || { iconClass: 'si si-code', color: '#666666' };
+    return iconMap[tech] || { iconClass: 'si si-code', color: '' };
   }
 }

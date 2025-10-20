@@ -1,342 +1,121 @@
-
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  overflow-x: hidden;
-}
+html { scroll-behavior: smooth; }
+body { overflow-x: hidden; }
 
 /* === CONTENEDOR RESPONSIVO === */
-.container {
-  width: 100%;
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
-@media (min-width: 640px) {
-  .container {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  .container {
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-}
+.container { width: 100%; padding-left: 1rem; padding-right: 1rem; }
+@media (min-width: 640px) { .container { padding-left: 1.5rem; padding-right: 1.5rem; } }
+@media (min-width: 1024px) { .container { padding-left: 2rem; padding-right: 2rem; } }
 
 /* === HEADER / HERO === */
-header {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-}
-
-@media (min-width: 768px) {
-  header {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  header {
-    padding-top: 6rem;
-    padding-bottom: 6rem;
-  }
-}
+header { padding-top: 3rem; padding-bottom: 3rem; }
+@media (min-width: 768px) { header { padding-top: 4rem; padding-bottom: 4rem; } }
+@media (min-width: 1024px) { header { padding-top: 6rem; padding-bottom: 6rem; } }
 
 /* Título principal */
-h1 {
-  font-size: 2rem;
-  line-height: 1.2;
-}
-
-@media (min-width: 640px) {
-  h1 {
-    font-size: 2.5rem;
-  }
-}
-
-@media (min-width: 768px) {
-  h1 {
-    font-size: 3rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  h1 {
-    font-size: 3.75rem;
-  }
-}
+h1 { font-size: 2rem; line-height: 1.2; }
+@media (min-width: 640px) { h1 { font-size: 2.5rem; } }
+@media (min-width: 768px) { h1 { font-size: 3rem; } }
+@media (min-width: 1024px) { h1 { font-size: 3.75rem; } }
 
 /* Subtítulo */
-header p:first-of-type {
-  font-size: 1.125rem;
-}
-
-@media (min-width: 768px) {
-  header p:first-of-type {
-    font-size: 1.25rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  header p:first-of-type {
-    font-size: 1.5rem;
-  }
-}
+header p:first-of-type { font-size: 1.125rem; }
+@media (min-width: 768px) { header p:first-of-type { font-size: 1.25rem; } }
+@media (min-width: 1024px) { header p:first-of-type { font-size: 1.5rem; } }
 
 /* Descripción */
-header p:last-of-type {
-  font-size: 0.875rem;
-}
-
-@media (min-width: 640px) {
-  header p:last-of-type {
-    font-size: 1rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  header p:last-of-type {
-    font-size: 1.125rem;
-  }
-}
+header p:last-of-type { font-size: 0.875rem; }
+@media (min-width: 640px) { header p:last-of-type { font-size: 1rem; } }
+@media (min-width: 1024px) { header p:last-of-type { font-size: 1.125rem; } }
 
 /* === BOTONES DEL HEADER === */
-header .flex {
-  flex-direction: column;
-  gap: 0.75rem;
-}
-
-@media (min-width: 640px) {
-  header .flex {
-    flex-direction: row;
-    gap: 1rem;
-  }
-}
-
-header .flex a {
-  width: 100%;
-  justify-content: center;
-}
-
-@media (min-width: 640px) {
-  header .flex a {
-    width: auto;
-  }
-}
+header .flex { flex-direction: column; gap: 0.75rem; }
+@media (min-width: 640px) { header .flex { flex-direction: row; gap: 1rem; } }
+header .flex a { width: 100%; justify-content: center; }
+@media (min-width: 640px) { header .flex a { width: auto; } }
 
 /* === SECCIONES === */
-section {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-}
-
-@media (min-width: 768px) {
-  section {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
-  }
-}
+section { padding-top: 3rem; padding-bottom: 3rem; }
+@media (min-width: 768px) { section { padding-top: 4rem; padding-bottom: 4rem; } }
 
 /* Títulos de sección */
-section h2 {
-  font-size: 1.875rem;
-}
+section h2 { font-size: 1.875rem; }
+@media (min-width: 768px) { section h2 { font-size: 2.25rem; } }
+@media (min-width: 1024px) { section h2 { font-size: 2.5rem; } }
 
-@media (min-width: 768px) {
-  section h2 {
-    font-size: 2.25rem;
-  }
-}
+/* === GRID BASE === */
+.grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
+@media (min-width: 768px) { .grid.md\:grid-cols-3 { grid-template-columns: repeat(3, 1fr); gap: 2rem; } }
+@media (min-width: 768px) { .grid.md\:grid-cols-2 { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px) { .grid.lg\:grid-cols-3 { grid-template-columns: repeat(3, 1fr); } }
 
-@media (min-width: 1024px) {
-  section h2 {
-    font-size: 2.5rem;
-  }
+/* === TARJETAS (cards) y CHIPS unificados === */
+.card {
+  border: 1px solid rgb(51 65 85 / 1); /* slate-700 */
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 1px rgba(0,0,0,.15);
+  transition: box-shadow .3s ease, transform .3s ease, border-color .3s ease;
+  background: rgba(15, 23, 42, .5); /* slate-900/50 */
 }
+.card:hover { box-shadow: 0 8px 24px rgba(0,0,0,.25); transform: translateY(-2px); border-color: rgb(59 130 246 / .6); }
 
-/* === GRID DE SKILLS === */
-.grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.5rem;
+.chip {
+  border-radius: 9999px;
+  border: 1px solid rgb(71 85 105 / .8); /* slate-600/80 */
+  padding: .25rem .75rem;
+  font-size: .8125rem;
+  line-height: 1.25rem;
+  transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease, background-color .3s ease;
+  background: rgba(51, 65, 85, .7); /* slate-700/70 */
 }
+.chip:hover { transform: translateY(-1px); box-shadow: 0 6px 14px rgba(0,0,0,.18); border-color: rgb(148 163 184 / 1); }
 
-@media (min-width: 768px) {
-  .grid.md\:grid-cols-3 {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-  }
-}
-
-/* Tarjetas de skills */
-.bg-slate-900\/50 {
-  padding: 1.25rem;
-}
-
-@media (min-width: 768px) {
-  .bg-slate-900\/50 {
-    padding: 1.5rem;
-  }
-}
-
-/* Skills tags */
-.bg-slate-900\/50 .flex {
-  gap: 0.5rem;
-}
-
-.bg-slate-900\/50 .flex > div {
-  font-size: 0.75rem;
-  padding: 0.5rem 0.75rem;
-}
-
-@media (min-width: 640px) {
-  .bg-slate-900\/50 .flex > div {
-    font-size: 0.875rem;
-    padding: 0.5rem 1rem;
-  }
-}
-
-@media (min-width: 768px) {
-  .bg-slate-900\/50 .flex {
-    gap: 0.75rem;
-  }
-}
-
-/* === GRID DE PROYECTOS === */
-@media (min-width: 768px) {
-  .grid.md\:grid-cols-2 {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (min-width: 1024px) {
-  .grid.lg\:grid-cols-3 {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-/* Tarjetas de proyecto */
-.bg-slate-800\/50 {
-  padding: 1.25rem;
-}
-
-@media (min-width: 768px) {
-  .bg-slate-800\/50 {
-    padding: 1.5rem;
-  }
-}
+/* Tarjetas específicas (espaciados) */
+.bg-slate-900\/50 { padding: 1.25rem; }
+@media (min-width: 768px) { .bg-slate-900\/50 { padding: 1.5rem; } }
+.bg-slate-800\/50 { padding: 1.25rem; }
+@media (min-width: 768px) { .bg-slate-800\/50 { padding: 1.5rem; } }
 
 /* Título de proyecto */
-.bg-slate-800\/50 h3 {
-  font-size: 1.125rem;
-}
-
-@media (min-width: 768px) {
-  .bg-slate-800\/50 h3 {
-    font-size: 1.25rem;
-  }
-}
+.bg-slate-800\/50 h3, .card h3 { font-size: 1.125rem; }
+@media (min-width: 768px) { .bg-slate-800\/50 h3, .card h3 { font-size: 1.25rem; } }
 
 /* Tags de tecnologías en proyectos */
-.bg-slate-800\/50 .flex span {
-  font-size: 0.75rem;
-  padding: 0.25rem 0.75rem;
-}
-
-@media (min-width: 640px) {
-  .bg-slate-800\/50 .flex span {
-    font-size: 0.875rem;
-  }
-}
+.bg-slate-800\/50 .flex span { font-size: 0.75rem; padding: 0.25rem 0.75rem; }
+@media (min-width: 640px) { .bg-slate-800\/50 .flex span { font-size: 0.875rem; } }
 
 /* === SECCIÓN CONTACTO === */
-#contacto .flex {
-  gap: 1rem;
-}
-
-#contacto .flex a,
-#contacto .flex div {
-  font-size: 0.875rem;
-}
-
-@media (min-width: 640px) {
-  #contacto .flex a,
-  #contacto .flex div {
-    font-size: 1rem;
-  }
-}
-
-@media (min-width: 768px) {
-  #contacto .flex a,
-  #contacto .flex div {
-    font-size: 1.125rem;
-  }
-}
+#contacto .flex { gap: 1rem; }
+#contacto .flex a, #contacto .flex div { font-size: 0.875rem; }
+@media (min-width: 640px) { #contacto .flex a, #contacto .flex div { font-size: 1rem; } }
+@media (min-width: 768px) { #contacto .flex a, #contacto .flex div { font-size: 1.125rem; } }
 
 /* === FOOTER === */
-footer {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-}
-
-footer p {
-  font-size: 0.875rem;
-}
-
-@media (min-width: 640px) {
-  footer p {
-    font-size: 1rem;
-  }
-}
+footer { padding-top: 2rem; padding-bottom: 2rem; }
+footer p { font-size: 0.875rem; }
+@media (min-width: 640px) { footer p { font-size: 1rem; } }
 
 /* === OPTIMIZACIÓN PARA MÓVILES MUY PEQUEÑOS === */
 @media (max-width: 375px) {
-  .container {
-    padding-left: 0.75rem;
-    padding-right: 0.75rem;
-  }
-
-  h1 {
-    font-size: 1.75rem;
-  }
-
-  header p:first-of-type {
-    font-size: 1rem;
-  }
-
-  .bg-slate-900\/50,
-  .bg-slate-800\/50 {
-    padding: 1rem;
-  }
+  .container { padding-left: 0.75rem; padding-right: 0.75rem; }
+  h1 { font-size: 1.75rem; }
+  header p:first-of-type { font-size: 1rem; }
+  .bg-slate-900\/50, .bg-slate-800\/50 { padding: 1rem; }
 }
 
 /* === MEJORA TÁCTIL PARA MÓVILES === */
 @media (hover: none) and (pointer: coarse) {
-  a, button {
-    -webkit-tap-highlight-color: rgba(59, 130, 246, 0.3);
-  }
+  a, button { -webkit-tap-highlight-color: rgba(59, 130, 246, 0.3); }
 }
 
 /* === TRANSICIONES SUAVES === */
-a, button, .bg-slate-800\/50 {
-  transition: all 0.3s ease;
-}
+a, button, .bg-slate-800\/50 { transition: all 0.3s ease; }
 
 /* === SVG RESPONSIVOS === */
-svg {
-  flex-shrink: 0;
-}
+svg { flex-shrink: 0; }
+@media (max-width: 640px) { svg.w-8 { width: 1.5rem; height: 1.5rem; } }
 
-@media (max-width: 640px) {
-  svg.w-8 {
-    width: 1.5rem;
-    height: 1.5rem;
-  }
+/* === ACCESIBILIDAD: focus y reduce motion === */
+:focus-visible { outline: none; }
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; animation: none !important; }
 }
