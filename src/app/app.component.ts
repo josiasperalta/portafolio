@@ -1,3 +1,4 @@
+// app.component.ts
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -41,42 +42,58 @@ export class AppComponent {
     { name: 'Git/GitHub',  iconClass: 'devicon-github-original', color: '' }
   ];
 
-  // === Habilidades Técnicas Clave (nueva sección) ===
+  // === Habilidades Técnicas Clave ===
   stackCategories: StackCategory[] = [
     {
       title: 'Backend',
       colorClass: 'text-blue-400',
       items: [
-        'C# (.NET Core) / Java (Spring Boot)',
-        'POO avanzada · DI · Repository · Unit of Work',
-        'RESTful APIs (CRUD) · JWT (autenticación)'
+        'C# (.NET Core) · Java (Spring Boot)',
+      'POO avanzada (herencia, polimorfismo, encapsulamiento)',
+      'Patrones: Repository · Unit of Work · Singleton · Factory · Strategy · Observer',
+      'Arquitectura en capas (Controller, Service, Repository)',
+      'RESTful APIs (CRUD · DTOs · validaciones · manejo de errores)',
+      'JWT Authentication · Inyección de Dependencias',
+      'Entity Framework Core / Hibernate (ORM)',
+      'Testing y documentación con Postman y Swagger'
       ]
     },
     {
       title: 'Frontend',
       colorClass: 'text-purple-400',
       items: [
-        'Angular 17+ (TypeScript) · SPA',
-        'Componentes modulares · Enrutamiento',
-        'Formularios reactivos · RxJS (Observables)'
+       'Angular 17+ · TypeScript · JavaScript (ES6+)',
+      'HTML5 · CSS3 · Bootstrap',
+      'Arquitectura SPA (Single Page Application)',
+      'Componentes modulares y comunicación con @Input / @Output / EventEmitter',
+      'RxJS (Observables · Suscripciones · Asincronía)',
+      'Formularios reactivos · Validaciones personalizadas',
+      'Ruteo con Angular Router',
+      'Integración de APIs REST desde el frontend'
       ]
     },
     {
       title: 'Bases de Datos',
       colorClass: 'text-cyan-400',
       items: [
-        'SQL Server (consultas, SPs, triggers)',
-        'EF Core (ORM) · ADO.NET',
-        'MongoDB · Redis · Neo4j · Cassandra'
+         'SQL Server · MySQL (modelo relacional)',
+      'Consultas avanzadas · Subconsultas · Joins · Funciones agregadas',
+      'Procedimientos almacenados · Triggers · Transacciones',
+      'Entity Framework Core (ORM) · ADO.NET',
+      'MongoDB (documental) · Redis (clave-valor)',
+      'Neo4j (grafos · Cypher) · Cassandra (columnar)',
+      'Optimización de consultas y diseño de índices'
       ]
     },
     {
       title: 'Herramientas',
       colorClass: 'text-emerald-400',
       items: [
-        'Git/GitHub (ramas, PRs, merges)',
-        'Docker · Postman/Swagger',
-        'VS/VS Code/IntelliJ'
+         'Git / GitHub (ramas, PRs, merges, versionado colaborativo)',
+    'Docker · Postman · Swagger',
+    'Visual Studio · VS Code · IntelliJ IDEA · SSMS',
+    'Linux Terminal · PowerShell',
+    'Jira · Trello · Notion (gestión ágil de proyectos)'
       ]
     }
   ];
@@ -103,30 +120,32 @@ export class AppComponent {
     }
   ];
 
-  // === Metodologías y Gestión de Proyectos ===
-  methodologies: Methodology[] = [
-    {
-      title: 'Metodologías Ágiles',
-      details: [
-        'Scrum: roles, eventos y artefactos · Kanban.',
-        'Historias de Usuario (INVEST/BDD).'
-      ]
-    },
-    {
-      title: 'Gestión de Proyectos',
-      details: [
-        'PMBOK: alcance, tiempos, costos y riesgos.',
-        'Herramientas: Jira, Trello.'
-      ]
-    },
-    {
-      title: 'Control de Versiones',
-      details: [
-        'Git/GitHub avanzado: ramas, merges y resolución de conflictos.'
-      ]
-    }
-  ];
-
+// === Metodologías y Gestión de Proyectos ===
+methodologies: Methodology[] = [
+  {
+    title: 'Metodologías Ágiles',
+    details: [
+      'Scrum: roles, eventos y artefactos · Kanban.',
+      'Historias de Usuario (INVEST / BDD).',
+      'Uso de métricas (velocidad, lead time) y mejora continua.'
+    ]
+  },
+  {
+    title: 'Gestión de Proyectos',
+    details: [
+      'PMBOK: alcance, tiempos, costos y riesgos.',
+      'herramientas ágiles: Taiga, Jira, GitHub Projects.',
+      'Automatización y documentación (CI/CD, Wiki técnica).'
+    ]
+  },
+  {
+    title: 'Control de Versiones',
+    details: [
+      'Git/GitHub avanzado: ramas, merges y resolución de conflictos.',
+      'Flujos de trabajo: GitFlow / Feature Branch / Pull Request.'
+    ]
+  }
+];
   // === Proyectos ===
   projects: Project[] = [
     {

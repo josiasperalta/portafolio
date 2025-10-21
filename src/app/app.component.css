@@ -55,6 +55,7 @@ section h2 { font-size: 1.875rem; }
   box-shadow: 0 1px 1px rgba(0,0,0,.15);
   transition: box-shadow .3s ease, transform .3s ease, border-color .3s ease;
   background: rgba(15, 23, 42, .5); /* slate-900/50 */
+  min-inline-size: 0; /* evita overflow en grids/flex */
 }
 .card:hover { box-shadow: 0 8px 24px rgba(0,0,0,.25); transform: translateY(-2px); border-color: rgb(59 130 246 / .6); }
 
@@ -66,13 +67,14 @@ section h2 { font-size: 1.875rem; }
   line-height: 1.25rem;
   transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease, background-color .3s ease;
   background: rgba(51, 65, 85, .7); /* slate-700/70 */
+  white-space: nowrap; /* wrap prolijo en contenedor flex */
 }
 .chip:hover { transform: translateY(-1px); box-shadow: 0 6px 14px rgba(0,0,0,.18); border-color: rgb(148 163 184 / 1); }
 
 /* Tarjetas específicas (espaciados) */
 .bg-slate-900\/50 { padding: 1.25rem; }
 @media (min-width: 768px) { .bg-slate-900\/50 { padding: 1.5rem; } }
-.bg-slate-800\/50 { padding: 1.25rem; }
+.bg-slate-800\/50 { padding: 1.25rem; min-inline-size: 0; }
 @media (min-width: 768px) { .bg-slate-800\/50 { padding: 1.5rem; } }
 
 /* Título de proyecto */
@@ -114,8 +116,13 @@ a, button, .bg-slate-800\/50 { transition: all 0.3s ease; }
 svg { flex-shrink: 0; }
 @media (max-width: 640px) { svg.w-8 { width: 1.5rem; height: 1.5rem; } }
 
-/* === ACCESIBILIDAD: focus y reduce motion === */
-:focus-visible { outline: none; }
+/* === ACCESIBILIDAD: foco y reduce motion === */
+/* Restauramos foco visible (antes estaba desactivado globalmente) */
+:focus-visible {
+  outline: 2px solid #60a5fa;
+  outline-offset: 3px;
+}
+
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; animation: none !important; }
 }
