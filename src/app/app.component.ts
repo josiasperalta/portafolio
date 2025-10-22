@@ -16,6 +16,9 @@ interface Methodology { title: string; details: string[]; }
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
+  menuOpen = false;
+
   // === Skills (sección original "Tecnologías") ===
   backendSkills: Skill[] = [
     { name: 'Java (Spring Boot)', iconClass: 'devicon-spring-plain colored', color: '' },

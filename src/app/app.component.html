@@ -1,15 +1,49 @@
-<nav class="sticky top-0 z-40 bg-slate-900 border-b border-slate-800 shadow-sm" role="navigation" aria-label="Principal">
-  <div class="container mx-auto px-6 h-14 flex items-center gap-4 text-sm">
-    <a href="#resumen" class="inline-flex items-center min-h-[44px] text-slate-100 hover:text-blue-300 focus-visible:ring-2 focus-visible:ring-blue-400 rounded px-2 py-1">Resumen</a>
-    <a href="#tecnologias" class="inline-flex items-center min-h-[44px] text-slate-100 hover:text-blue-300 focus-visible:ring-2 focus-visible:ring-blue-400 rounded px-2 py-1">Tecnologías</a>
-    <a href="#habilidades-tecnicas" class="inline-flex items-center min-h-[44px] text-slate-100 hover:text-blue-300 focus-visible:ring-2 focus-visible:ring-blue-400 rounded px-2 py-1">Habilidades</a>
-    <a href="#programacion" class="inline-flex items-center min-h-[44px] text-slate-100 hover:text-blue-300 focus-visible:ring-2 focus-visible:ring-blue-400 rounded px-2 py-1">Arquitectura</a>
-    <a href="#metodologias" class="inline-flex items-center min-h-[44px] text-slate-100 hover:text-blue-300 focus-visible:ring-2 focus-visible:ring-blue-400 rounded px-2 py-1">Metodologías</a>
-    <a href="#proyectos" class="inline-flex items-center min-h-[44px] text-slate-100 hover:text-blue-300 focus-visible:ring-2 focus-visible:ring-blue-400 rounded px-2 py-1">Proyectos</a>
-    <a href="#sobre-mi" class="inline-flex items-center min-h-[44px] text-slate-100 hover:text-blue-300 focus-visible:ring-2 focus-visible:ring-blue-400 rounded px-2 py-1">Sobre mí</a>
-    <a href="#contacto" class="ml-auto bg-blue-600 hover:bg-blue-700 px-3 py-1.5 rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400/70 min-h-[44px] inline-flex items-center">Contacto</a>
+<!-- NAVBAR FIJO, NO-INTRUSIVO -->
+<nav class="fixed top-0 left-0 w-full z-50 bg-slate-900/90 backdrop-blur-md shadow-md">
+  <div class="container mx-auto max-w-6xl px-4 md:px-6 h-16 flex items-center justify-between">
+    <!-- Logo -->
+    <a href="#inicio" class="text-blue-400 hover:text-cyan-400 font-bold tracking-tight">
+      Josias Peralta
+    </a>
+
+    <!-- Botón Hamburger (solo móvil) -->
+    <button
+      class="md:hidden text-slate-300 hover:text-blue-300 focus:outline-none"
+      (click)="menuOpen = !menuOpen"
+      aria-label="Abrir menú de navegación">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+           viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+
+    <!-- Links escritorio (tamaños controlados) -->
+    <ul class="hidden md:flex items-center space-x-6 text-slate-300 font-medium text-[15px] leading-none">
+      <li><a href="#resumen" class="hover:text-blue-400">Resumen</a></li>
+      <li><a href="#tecnologias" class="hover:text-blue-400">Tecnologías</a></li>
+      <li><a href="#habilidades" class="hover:text-blue-400">Habilidades</a></li>
+      <li><a href="#proyectos" class="hover:text-blue-400">Proyectos</a></li>
+      <li><a href="#sobre-mi" class="hover:text-blue-400">Sobre Mí</a></li>
+      <li><a href="#contacto" class="hover:text-blue-400">Contacto</a></li>
+    </ul>
+  </div>
+
+  <!-- Menú móvil fuera de flujo (no empuja contenido) -->
+  <div *ngIf="menuOpen" class="md:hidden absolute top-16 left-0 w-full bg-slate-800/95 backdrop-blur-md border-t border-slate-700">
+    <div class="container mx-auto max-w-6xl">
+      <ul class="flex flex-col divide-y divide-slate-700 text-slate-200 font-medium text-base">
+        <li><a href="#resumen" class="block px-4 py-3 hover:text-cyan-400" (click)="menuOpen = false">Resumen</a></li>
+        <li><a href="#tecnologias" class="block px-4 py-3 hover:text-cyan-400" (click)="menuOpen = false">Tecnologías</a></li>
+        <li><a href="#habilidades" class="block px-4 py-3 hover:text-cyan-400" (click)="menuOpen = false">Habilidades</a></li>
+        <li><a href="#proyectos" class="block px-4 py-3 hover:text-cyan-400" (click)="menuOpen = false">Proyectos</a></li>
+        <li><a href="#sobre-mi" class="block px-4 py-3 hover:text-cyan-400" (click)="menuOpen = false">Sobre Mí</a></li>
+        <li><a href="#contacto" class="block px-4 py-3 hover:text-cyan-400" (click)="menuOpen = false">Contacto</a></li>
+      </ul>
+    </div>
   </div>
 </nav>
+
 
 <div class="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
   <!-- Skip link accesible -->
@@ -150,23 +184,31 @@
       </div>
     </section>
 
-    <!-- Habilidades Técnicas Clave -->
-    <section id="habilidades-tecnicas" class="container mx-auto px-6 py-16 bg-slate-800/50 scroll-mt-20 md:scroll-mt-24" role="region" aria-labelledby="stack-title">
-      <header class="mb-8">
-        <h2 id="stack-title" class="group text-3xl md:text-4xl font-bold">
-          Habilidades Técnicas Clave
-          <a href="#stack-title" class="opacity-0 group-hover:opacity-100 align-middle text-slate-400 hover:text-blue-300 ml-2 transition" aria-label="Enlace a Habilidades Técnicas Clave">#</a>
-        </h2>
-      </header>
-      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <article *ngFor="let cat of stackCategories" class="card p-6">
-          <h3 class="text-xl font-semibold mb-3" [ngClass]="cat.colorClass">{{cat.title}}</h3>
-          <ul class="list-disc list-inside text-slate-300 space-y-1">
-            <li *ngFor="let item of cat.items">{{item}}</li>
-          </ul>
-        </article>
-      </div>
-    </section>
+ 
+    
+<!-- Habilidades Técnicas Clave -->
+<section id="habilidades"
+         class="container mx-auto px-6 py-16 bg-slate-800/50 scroll-mt-20 md:scroll-mt-24"
+         role="region" aria-labelledby="habilidades-title">
+  <header class="mb-8">
+    <h2 id="habilidades-title" class="group text-3xl md:text-4xl font-bold">
+      Habilidades Técnicas Clave
+      <a href="#habilidades-title"
+         class="opacity-0 group-hover:opacity-100 align-middle text-slate-400 hover:text-blue-300 ml-2 transition"
+         aria-label="Enlace a Habilidades Técnicas Clave">#</a>
+    </h2>
+  </header>
+
+  <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+    <article *ngFor="let cat of stackCategories" class="card p-6">
+      <h3 class="text-xl font-semibold mb-3" [ngClass]="cat.colorClass">{{cat.title}}</h3>
+      <ul class="list-disc list-inside text-slate-300 space-y-1">
+        <li *ngFor="let item of cat.items">{{item}}</li>
+      </ul>
+    </article>
+  </div>
+</section>
+
 
     <!-- Programación y Arquitectura -->
     <section id="programacion" class="container mx-auto px-6 py-16 scroll-mt-20 md:scroll-mt-24" role="region" aria-labelledby="prog-title">
